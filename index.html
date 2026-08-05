@@ -1,5 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<!-- index.html — Entry point principal do site R-Next -->
-<!-- Conteúdo será populado na Etapa 3 do roadmap -->
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <!-- =========================================
+        METADADOS ESSENCIAIS
+     ========================================= */ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R-Next | Arquitetura de Sistemas & Soluções Digitais</title>
+  <meta name="description" content="Desenvolvimento de software de alta performance, landing pages estáticas, sistemas sob medida (SaaS, PWA) e automações com infraestrutura ágil. Soluções que codam o futuro do seu negócio.">
+  <meta name="author" content="Rodrigo Souza | R-Next">
+  <meta name="robots" content="index, follow">
+
+  <!-- Meta Tags Open Graph (Social Sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="R-Next | Arquitetura de Sistemas & Soluções Digitais">
+  <meta property="og:description" content="Soluções estáticas e sistemas sob medida orientados a performance, inovação e escala.">
+  <meta property="og:site_name" content="R-Next">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="R-Next | Soluções Digitais">
+  <meta name="twitter:description" content="Soluções que codam o FUTURO.">
+
+  <!-- =========================================
+        RECURSOS EXTERNOS (Fonts & AlpineJS)
+     ========================================= */ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Alpine.js CDN (Gerenciamento leve de estado) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- =========================================
+        ESTILOS (Ordem estrita de cascata)
+     ========================================= */ -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- =========================================
+        SCRIPTS DA APLICAÇÃO
+     ========================================= */ -->
+  <script defer src="assets/js/security.js"></script>
+  <script defer src="assets/js/background.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false }">
+
+  <!-- Canvas animado de fundo (Rede de partículas) -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- =========================================
+        CABEÇALHO / NAVEGAÇÃO
+     ========================================= */ -->
+  <header id="main-header">
+    <nav id="navbar" aria-label="Navegação principal">
+      <!-- Logo R-Next -->
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <span class="logo-text">R-NEXT<span class="logo-dot">.</span></span>
+      </a>
+
+      <!-- Links de navegação desktop -->
+      <ul class="nav-links" id="nav-desktop-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+      </ul>
+
+      <!-- CTA de Contato -->
+      <div class="nav-actions">
+        <a href="#contato" class="btn btn-primary" id="header-cta-btn">Fale Conosco</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================
+        CONTEÚDO PRINCIPAL (Main)
+     ========================================= */ -->
+  <main id="main-content">
+    
+    <!-- 1. Hero Section -->
+    <section id="home" class="section hero-section" aria-labelledby="hero-title">
+      <!-- Conteúdo será construído na Etapa 6 -->
+    </section>
+
+    <!-- 2. Pain / Context Section (Sobre) -->
+    <section id="sobre" class="section sobre-section" aria-labelledby="sobre-title">
+      <!-- Conteúdo será construído na Etapa 6 -->
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="servicos" class="section servicos-section" aria-labelledby="servicos-title">
+      <!-- Conteúdo será construído na Etapa 6 -->
+    </section>
+
+    <!-- 4. Diferenciais Section -->
+    <section id="diferenciais" class="section diferenciais-section" aria-labelledby="diferenciais-title">
+      <!-- Conteúdo será construído na Etapa 6 -->
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contato" class="section contato-section" aria-labelledby="contato-title">
+      <!-- Conteúdo será construído na Etapa 6 -->
+    </section>
+
+  </main>
+
+  <!-- =========================================
+        RODAPÉ (Footer)
+     ========================================= */ -->
+  <footer id="main-footer">
+    <!-- Conteúdo será construído na Etapa 6 -->
+  </footer>
+
+</body>
 </html>
+
