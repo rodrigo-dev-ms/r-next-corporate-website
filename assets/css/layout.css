@@ -1,3 +1,16 @@
-/* layout.css — Estruturas Macro do R-Next */
-/* Grid/Flexbox para Header, Main, Footer */
-/* Conteúdo será implementado na Etapa 5 do roadmap */
+/* =========================================
+    CANVAS DE FUNDO (Background Animado)
+   ========================================= */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-background);
+  pointer-events: none;
+  background-color: transparent;
+}
+
+/* layout.css — Estruturas Macro adicionais serão implementadas na Etapa 5 */
+
