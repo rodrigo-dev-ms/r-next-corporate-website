@@ -1,6 +1,10 @@
 /* =========================================
-    CANVAS DE FUNDO (Background Animado)
+    ESTRUTURA MACRO E LAYOUT (R-Next)
+    Mobile First: Regras padrão para Mobile.
+    Breakpoints: 768px (Tablet), 1024px (Desktop), 1440px (Ultrawide)
    ========================================= */
+
+/* 1. Canvas de Fundo Animado */
 #bg-canvas {
   position: fixed;
   top: 0;
@@ -12,5 +16,287 @@
   background-color: transparent;
 }
 
-/* layout.css — Estruturas Macro adicionais serão implementadas na Etapa 5 */
+/* 2. Containers Utilitários */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
 
+.container-fluid {
+  width: 100%;
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
+
+/* 3. Cabeçalho Fixo & Navbar */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-header);
+  background: rgba(11, 15, 25, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+/* Menu de navegação desktop */
+.nav-links {
+  display: none; /* Oculto no mobile; exibido via media query a partir de 768px */
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.nav-actions {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+/* Botão de Toggle do Menu Mobile */
+.mobile-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-base);
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-primary);
+}
+
+/* Menu Mobile (Drawer Dropdown) */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: rgba(18, 24, 38, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+  padding: var(--spacing-6) var(--spacing-4);
+  gap: var(--spacing-4);
+}
+
+.mobile-menu .nav-link {
+  font-size: var(--text-lg);
+  padding: var(--spacing-2) 0;
+  display: block;
+}
+
+/* 4. Estrutura do Conteúdo Principal (Main) */
+#main-content {
+  position: relative;
+  z-index: var(--z-base);
+  width: 100%;
+  padding-top: 72px; /* Offset da navbar fixa */
+}
+
+/* 5. Seções Padronizadas (.section) */
+.section {
+  position: relative;
+  padding: var(--spacing-16) 0;
+  scroll-margin-top: 72px;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--spacing-12) auto;
+}
+
+.section-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-4);
+}
+
+.section-subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* 6. Layouts Específicos por Seção (Mobile First) */
+
+/* Hero Section (#home) */
+.hero-section {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-12) 0 var(--spacing-16) 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sobre Section (#sobre) */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  align-items: center;
+}
+
+/* Serviços Section (#servicos) - Grid 2x2 em Desktop */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+/* Diferenciais Section (#diferenciais) - 3 Colunas em Desktop */
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+/* Contato Section (#contato) */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+/* 7. Rodapé (#main-footer) */
+#main-footer {
+  position: relative;
+  background: var(--color-bg-surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-12) 0 var(--spacing-8) 0;
+  z-index: var(--z-base);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  align-items: center;
+  text-align: center;
+}
+
+.footer-bottom {
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* =========================================
+    BREAKPOINTS RESPONSIVOS (Scale-Up)
+   ========================================= */
+
+/* Tablet (>= 768px) */
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--spacing-6);
+    padding-right: var(--spacing-6);
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-actions {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .section {
+    padding: var(--spacing-24) 0;
+  }
+
+  .section-title {
+    font-size: var(--text-4xl);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diferenciais-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Desktop (>= 1024px) */
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--spacing-12);
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+  }
+
+  .diferenciais-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contato-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+  }
+}
+
+/* Ultrawide (>= 1440px) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+}

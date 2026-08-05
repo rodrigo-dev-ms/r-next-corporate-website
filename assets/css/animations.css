@@ -1,3 +1,68 @@
-/* animations.css — Keyframes do R-Next */
-/* Keyframes puros de animação */
-/* Conteúdo será implementado em etapas subsequentes do roadmap */
+/* =========================================
+    ANIMAÇÕES & KEYFRAMES (R-Next)
+   ========================================= */
+
+/* 1. Pulso Neon para destaques e botões */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--color-primary-glow);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.7), 0 0 35px rgba(0, 230, 118, 0.4);
+  }
+}
+
+/* 2. Flutuação sutil para cards e gráficos */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 3. Entrada suave com subida */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 4. Efeito de rotação lenta (Bordas e elementos visuais) */
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 5. Shimmer (Brilho de passagem em cards) */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Classes utilitárias de animação */
+.animate-float {
+  animation: floatAnimation 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
