@@ -1,3 +1,13 @@
+/* FIX: scroll suave blindado — garante comportamento nativo mesmo com overrides de terceiros */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* FIX: previne scroll horizontal sem interferir no smooth scroll vertical */
+body {
+  overflow-x: hidden;
+}
+
 /* =========================================
     ANIMAÇÕES & KEYFRAMES (R-Next)
    ========================================= */
@@ -61,6 +71,20 @@
 
 .animate-pulse-glow {
   animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* 3. CLASSE DE ANIMAÇÃO NO SCROLL (INTERSECTION OBSERVER) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .animate-fade-up {

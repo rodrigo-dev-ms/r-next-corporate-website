@@ -36,8 +36,10 @@
 #main-header {
   position: fixed;
   top: 0;
+  /* FIX: left+right no lugar de width:100% — respeita a scrollbar nativa */
   left: 0;
-  width: 100%;
+  right: 0;
+  width: auto;
   z-index: var(--z-header);
   background: rgba(11, 15, 25, 0.75);
   backdrop-filter: blur(12px);
@@ -50,10 +52,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
   max-width: 1280px;
   margin: 0 auto;
+  /* NOVO: padding lateral mantido; vertical zerado para a logo respirar */
   padding: 0 var(--spacing-4);
+  /* HEADER FIXO: Escala base (Mobile) cravada em 80px para não comer a tela */
+  height: 80px !important;
+  max-height: 80px !important;
+  min-height: 80px !important;
+  overflow: visible !important;
 }
 
 /* Menu de navegação desktop */
@@ -109,14 +116,15 @@
   position: relative;
   z-index: var(--z-base);
   width: 100%;
-  padding-top: 72px; /* Offset da navbar fixa */
+  /* FIX: padding-top acompanha a nova altura do header base (80px) */
+  padding-top: 80px;
 }
 
 /* 5. Seções Padronizadas (.section) */
 .section {
   position: relative;
-  padding: var(--spacing-16) 0;
-  scroll-margin-top: 72px;
+  padding: var(--spacing-8) 0;
+  scroll-margin-top: 160px;
 }
 
 .section-header {
@@ -196,26 +204,47 @@
   gap: var(--spacing-8);
 }
 
+/* FIX: respiro harmonioso entre título e botão — proporcional e focado em conversão */
+.contato-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* NOVO: espaço generoso abaixo do botão antes do footer */
+#contato {
+  padding-bottom: 8rem;
+}
+
 /* 7. Rodapé (#main-footer) */
 #main-footer {
   position: relative;
   background: var(--color-bg-surface);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding: var(--spacing-12) 0 var(--spacing-8) 0;
+  /* NOVO: padding ainda mais compacto */
+  padding: 1.5rem 0 !important;
+  min-height: unset !important;
+  height: auto !important;
   z-index: var(--z-base);
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-6);
+  gap: var(--spacing-4);
   align-items: center;
   text-align: center;
+  /* DESBLOQUEIO: permite que a logo do footer ocupe sua altura natural */
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 .footer-bottom {
-  margin-top: var(--spacing-8);
-  padding-top: var(--spacing-6);
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
   font-size: var(--text-xs);
@@ -250,7 +279,7 @@
   }
 
   .section {
-    padding: var(--spacing-24) 0;
+    padding: var(--spacing-16) 0;
   }
 
   .section-title {
@@ -291,6 +320,17 @@
   .contato-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-12);
+  }
+
+  /* Restauração do Header Gigante no Desktop */
+  #navbar {
+    height: 115px !important;
+    max-height: 115px !important;
+    min-height: 115px !important;
+  }
+  
+  #main-content {
+    padding-top: 115px;
   }
 }
 

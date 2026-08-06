@@ -61,7 +61,7 @@
     <nav id="navbar" aria-label="Navegação principal">
       <!-- Logo R-Next -->
       <a href="#home" class="nav-logo" id="nav-logo-link">
-        <span class="logo-text">R-NEXT<span class="logo-dot">.</span></span>
+        <img src="assets/img/logo.png" alt="R-Next Code & Core" class="nav-logo-img">
       </a>
 
       <!-- Links de navegação desktop -->
@@ -74,7 +74,7 @@
 
       <!-- CTA de Contato -->
       <div class="nav-actions">
-        <a href="#contato" class="btn btn-primary" id="header-cta-btn">Fale Conosco</a>
+        <a href="#contato" class="btn btn-primary" id="header-cta-btn" style="padding: 0.75rem 1.5rem;">Fale Conosco</a>
       </div>
 
       <!-- Botão de Toggle do Menu Mobile -->
@@ -123,37 +123,106 @@
   <main id="main-content">
     
     <!-- 1. Hero Section -->
-    <section id="home" class="section hero-section" aria-labelledby="hero-title">
-      <div class="container">
-        <!-- Conteúdo será construído na Etapa 6 -->
+    <section id="home" class="section hero-section reveal" aria-labelledby="hero-title">
+      <div class="container hero-grid" style="grid-template-columns: 1fr; text-align: left; max-width: 1000px; margin: 0 auto;">
+        <div class="hero-content glass-card" style="padding: 2rem; box-shadow: 0 16px 40px rgba(0, 229, 255, 0.1); width: 100%; max-width: 1000px !important;">
+          <span class="badge"><span>•</span> R-Next Code & Core</span>
+          <h1 id="hero-title" class="section-title text-4xl" style="font-size: clamp(2rem, 4.5vw, 2.6rem); line-height: 1.1; margin-bottom: var(--spacing-4);">Arquitetura de Sistemas e Orquestração de Infraestrutura Crítica</h1>
+          <p class="section-subtitle" style="font-size: clamp(0.95rem, 1.8vw, 1.1rem); line-height: 1.6;">Com expertise consolidada na orquestração de infraestruturas críticas e desenvolvimento full stack de ponta a ponta, atuo na intersecção exata entre o código e a operação. Transformo as demandas complexas do seu cotidiano comercial em soluções de software inteligentes, escaláveis e de alta resiliência. O foco é garantir que a base tecnológica do seu negócio opere sem gargalos, com máxima segurança e perfeitamente alinhada ao crescimento da sua empresa.</p>
+          <div class="hero-actions" style="margin-top: var(--spacing-6); display: flex; gap: var(--spacing-4); flex-wrap: wrap;">
+            <a href="#contato" class="btn btn-primary btn-lg btn-glow">Solicite seu projeto</a>
+            <a href="#servicos" class="btn btn-outline btn-lg">Ver Nossos Serviços</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 2. Pain / Context Section (Sobre) -->
-    <section id="sobre" class="section sobre-section" aria-labelledby="sobre-title">
-      <div class="container">
-        <!-- Conteúdo será construído na Etapa 6 -->
+    <section id="sobre" class="section sobre-section reveal" aria-labelledby="sobre-title">
+      <div class="container sobre-grid">
+        <div class="sobre-content">
+          <h2 id="sobre-title" class="section-title">Tecnologia • Estratégia • Resultados</h2>
+          <p class="section-subtitle">Atuamos na intersecção entre o código e a infraestrutura. Desenvolvemos soluções com rigor técnico e foco em performance, garantindo que sua operação seja validada por sistemas robustos, seguros e prontos para o futuro.</p>
+        </div>
       </div>
     </section>
 
     <!-- 3. Services Section -->
-    <section id="servicos" class="section servicos-section" aria-labelledby="servicos-title">
+    <section id="servicos" class="section servicos-section reveal" aria-labelledby="servicos-title">
       <div class="container">
-        <!-- Conteúdo será construído na Etapa 6 -->
+        <div class="section-header">
+          <h2 id="servicos-title" class="section-title gradient-text">Nossos Serviços</h2>
+        </div>
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="card glass-card service-card">
+            <h3 class="text-xl font-bold" style="color: var(--color-primary); margin-bottom: var(--spacing-3);">Sites Institucionais Responsivos</h3>
+            <p class="section-subtitle">Desenvolvimento de Landing Pages e plataformas corporativas com arquitetura focada em performance extrema, SEO técnico e design responsivo (Mobile-First). Entregamos interfaces fluidas, otimizadas para velocidade de carregamento, convertendo acessos em autoridade digital sólida.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="card glass-card service-card">
+            <h3 class="text-xl font-bold" style="color: var(--color-primary); margin-bottom: var(--spacing-3);">Projeto e Desenvolvimento</h3>
+            <p class="section-subtitle">Engenharia de software sob medida do back-end ao front-end. Construção de Sistemas Web Cliente-Servidor, Progressive Web Apps (PWA), soluções SaaS e microsserviços. Utilização de padrões arquiteturais modernos e implantação em Cloud para máxima manutenibilidade.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="card glass-card service-card">
+            <h3 class="text-xl font-bold" style="color: var(--color-primary); margin-bottom: var(--spacing-3);">Automações com Infraestrutura ao Código (IaC)</h3>
+            <p class="section-subtitle">Orquestração e versionamento da sua infraestrutura crítica. Redução de overhead operacional através da automação de rotinas e provisionamento como código (IaC). Garantimos ambientes padronizados, alta disponibilidade (HA) e escalabilidade para operações de missão crítica.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="card glass-card service-card">
+            <h3 class="text-xl font-bold" style="color: var(--color-primary); margin-bottom: var(--spacing-3);">Dashboards de Coleta e Apresentação</h3>
+            <p class="section-subtitle">Transformação de dados brutos em inteligência acionável. Implementação de pipelines robustos de coleta e painéis interativos em tempo real, fornecendo monitoramento de saúde de sistemas e visualizações claras para embasar decisões estratégicas.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 4. Diferenciais Section -->
-    <section id="diferenciais" class="section diferenciais-section" aria-labelledby="diferenciais-title">
+    <section id="diferenciais" class="section diferenciais-section reveal" aria-labelledby="diferenciais-title">
       <div class="container">
-        <!-- Conteúdo será construído na Etapa 6 -->
+        <div class="section-header">
+          <h2 id="diferenciais-title" class="section-title">Por que a R-Next?</h2>
+        </div>
+        <div class="diferenciais-grid">
+          <!-- Item 1 -->
+          <div class="card glass-card">
+            <div class="icon-box-green" style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:var(--radius-md); margin-bottom:var(--spacing-4);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3 class="text-lg font-bold" style="margin-bottom: var(--spacing-2);">Valores Justos</h3>
+            <p class="section-subtitle">Alinhados com o padrão do mercado de tecnologia e com a realidade do seu projeto.</p>
+          </div>
+          <!-- Item 2 -->
+          <div class="card glass-card">
+            <div class="icon-box-green" style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:var(--radius-md); margin-bottom:var(--spacing-4);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3 class="text-lg font-bold" style="margin-bottom: var(--spacing-2);">Transparência Fiscal</h3>
+            <p class="section-subtitle">Emissão de Notas Fiscais de Serviço (NFS-e) para todas as operações.</p>
+          </div>
+          <!-- Item 3 -->
+          <div class="card glass-card">
+            <div class="icon-box-green" style="display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:var(--radius-md); margin-bottom:var(--spacing-4);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3 class="text-lg font-bold" style="margin-bottom: var(--spacing-2);">Flexibilidade</h3>
+            <p class="section-subtitle">Total flexibilidade nos meios de pagamento institucionais.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 5. Contact Section -->
-    <section id="contato" class="section contato-section" aria-labelledby="contato-title">
-      <div class="container">
-        <!-- Conteúdo será construído na Etapa 6 -->
+    <section id="contato" class="section contato-section reveal" aria-labelledby="contato-title">
+      <div class="container contato-grid">
+        <div class="contato-content">
+          <h2 id="contato-title" class="section-title">Vamos construir juntos a próxima grande solução do seu negócio?</h2>
+          <a href="https://wa.me/5565992372983" target="_blank" class="btn btn-whatsapp-cta">
+            <img src="assets/icons/whatsapp-vetor.png" alt="WhatsApp" class="btn-icon icon-green">
+            Fale Conosco via WhatsApp
+          </a>
+        </div>
       </div>
     </section>
 
@@ -162,9 +231,27 @@
   <!-- =========================================
         RODAPÉ (Footer)
      ========================================= */ -->
-  <footer id="main-footer">
-    <div class="container">
-      <!-- Conteúdo será construído na Etapa 6 -->
+  <footer id="main-footer" class="reveal">
+    <div class="container footer-content" style="flex-direction: column; align-items: flex-start; gap: 1rem; padding-top: 0.5rem; padding-bottom: 0.5rem;">
+      <div style="display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: var(--spacing-4);">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="R-Next Code & Core" class="footer-logo-img" loading="lazy">
+          <p style="font-size: 1.125rem; font-weight: 500; color: var(--color-text-base); margin-top: 1rem;">Rodrigo Souza | Arquiteto de Software e Soluções</p>
+        </div>
+        <div class="footer-contact" style="display: flex; flex-direction: column; gap: var(--spacing-4);">
+          <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-text-base);">
+            <img src="assets/icons/celular-vetor.png" alt="Telefone" class="icon-green" style="width: 24px; height: 24px;">
+            <span>(65) 99237-2983</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-text-base);">
+            <img src="assets/icons/email-vetor.png" alt="Email" class="icon-green" style="width: 24px; height: 24px;">
+            <span>rnextservicos_@hotmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom" style="width: 100%;">
+        Copyright &copy; 2026 Rodrigo Souza. Todos os direitos reservados.
+      </div>
     </div>
   </footer>
 

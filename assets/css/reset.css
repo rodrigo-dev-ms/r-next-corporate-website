@@ -14,11 +14,10 @@
   font: inherit;
 }
 
-/* 3. Comportamento fluido e padrão do corpo e HTML */
+/* FIX: height:100% removido — impedia o smooth scroll nativo do navegador */
 html, body {
-  height: 100%;
   width: 100%;
-  overflow-x: hidden; /* Previne scroll horizontal acidental */
+  overflow-x: hidden;
 }
 
 body {
